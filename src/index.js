@@ -1,19 +1,14 @@
-const fs = require('fs')
-
-const caminhoArquivo = process.argv
-const link = caminhoArquivo[2]
-
-fs.readFile(link, 'utf-8', (erro, texto) => {
-    quebraEmParagrafos(texto)
-})
-
-function quebraEmParagrafos(texto) {
-    const paragrafos = texto.toLowerCase().split('\n')
+export function contaPalavras(texto) {
+    const paragrafos = extraiParagrafos(texto)
     const contagem = paragrafos.flatMap((paragrafo) => {
         if(!paragrafo) return []
         return verificaPalavrasDuplicadas(paragrafo)
     })
-    console.log(contagem)
+    return contagem
+}
+
+function extraiParagrafos(texto) {
+    return texto.toLowerCase().split('\n')
 }
 
 function limpaPalavras(palavra) {
