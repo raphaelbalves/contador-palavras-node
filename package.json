@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/raphaelbalves/contador-palavras-node/issues"
   },
-  "homepage": "https://github.com/raphaelbalves/contador-palavras-node#readme"
+  "homepage": "https://github.com/raphaelbalves/contador-palavras-node#readme",
+  "dependencies": {
+    "chalk": "^5.6.0",
+    "commander": "^14.0.0"
+  }
 }
